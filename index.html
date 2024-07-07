@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>16BitPainter</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="painterContainer">
+            <div id="settingContainer">
+                <div id="topItem">Click mode</div>
+                <div id="toolContainer">
+                    <button id="paintButton" class="toolButtons"><img src="images/brush.png"></button>
+                    <button id="clearButton" class="toolButtons"><img src="images/eraser.png"></button>
+                    <button id="fillButton" class="toolButtons"><img src="images/fill.png"></button>
+                </div>
+                <br>
+                Change void-representing color
+                <br>
+                <button id="changeVoidButton">Black / White</button>
+                <br>
+                Color
+                <div id="colorContainer">
+                    
+                </div>
+                Set color RGB 
+                <div id="RGBinputContainer">
+                    R
+                    <input type="number" id="rInput" class="inputBar" value="0" min="0" max="255">
+                    <br>
+                    G
+                    <input type="number" id="gInput" class="inputBar" value="0" min="0" max="255">
+                    <br>
+                    B
+                    <input type="number" id="bInput" class="inputBar" value="0" min="0" max="255">
+                    <br>
+                    <button id="commitChangeButton">Change</button>
+                </div>
+                <br>
+                History
+                <br>
+                <div id="historyContainer">
+                    <button id="backButton">Back</button>
+                </div>
+            </div>
+
+            <div id="displayContainer">
+                <canvas id="displayCanvas"></canvas>
+            </div>
+
+            <div id="saveContainer">
+                Choose image width
+                <br><br>
+                <select>
+                    <option value="16">16</option>
+                    <option value="32">32</option>
+                    <option value="64" selected>64</option>
+                    <option value="128">128</option>
+                    <option value="256">256</option>
+                </select>
+                <br>
+                <button id="pngSaveButton" class="saveButtons">SAVE TO PNG</button>
+                <button id="jpgSaveButton" class="saveButtons">SAVE TO JPEG</button>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+
+</html>
+
